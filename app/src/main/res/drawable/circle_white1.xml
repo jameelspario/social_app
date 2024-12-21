@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <solid android:color="@android:color/white"/>
+    <size android:width="@dimen/live_pk_progress_text_margin" android:height="@dimen/live_pk_progress_text_margin"/>
+</shape>

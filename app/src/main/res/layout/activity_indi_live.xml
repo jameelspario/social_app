@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="false"
+    android:background="@drawable/bg_black_blue_shadow"
+    android:fitsSystemWindows="true">
+
+    <ImageView
+        android:id="@+id/background_profile_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile_image_5"
+        android:visibility="visible" />
+
+    <com.twilio.video.VideoView
+        android:id="@+id/stream_primary_cam"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.deificindia.indifun.deificpk.widgets.LiveHostNameLayout
+        android:id="@+id/pk_host_in_name_pad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.deificindia.indifun.deificpk.widgets.LiveRoomUserLayout
+        android:id="@+id/pk_host_in_participant"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintBottom_toBottomOf="@+id/live_bottom_btn_close"
+        app:layout_constraintEnd_toStartOf="@+id/live_bottom_btn_close"
+        app:layout_constraintStart_toEndOf="@+id/pk_host_in_name_pad"
+        app:layout_constraintTop_toTopOf="@+id/live_bottom_btn_close" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/live_bottom_btn_close"
+        android:layout_width="@dimen/_24dp"
+        android:layout_height="@dimen/_24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/round_dark_gray_bg"
+        android:src="@drawable/live_bottom_btn_close"
+        app:layout_constraintBottom_toBottomOf="@+id/pk_host_in_name_pad"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/pk_host_in_name_pad" />
+
+    <!--user level-->
+    <com.deificindia.indifun.ui.RoundCornerLinearLayout
+        android:id="@+id/itemLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginTop="@dimen/_8dp"
+        android:animateLayoutChanges="true"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:rcll_corner="45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pk_host_in_name_pad" >
+
+        <ImageView
+            android:id="@+id/level1"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:src="@drawable/ic_star3"
+            android:layout_gravity="center_vertical"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_user_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lvl. 0"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_4dp"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical" />
+
+    </com.deificindia.indifun.ui.RoundCornerLinearLayout>
+
+    <com.deificindia.indifun.ui.RoundCornerLinearLayout
+        android:id="@+id/itemLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/itemLayout1"
+        android:animateLayoutChanges="true"
+        android:visibility="visible"
+        android:background="@drawable/bg_items_heart_xp"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_8dp"
+        android:layout_marginEnd="@dimen/_8dp"
+        android:paddingStart="@dimen/_8dp"
+        android:paddingEnd="@dimen/_8dp"
+        app:rcll_corner="45"
+        app:layout_constraintTop_toTopOf="@id/itemLayout1"
+        app:layout_constraintBottom_toBottomOf="@+id/itemLayout1"
+        app:layout_constraintStart_toEndOf="@id/itemLayout1">
+
+        <ImageView
+            android:id="@+id/img_coin"
+            android:layout_width="@dimen/_12dp"
+            android:layout_height="@dimen/_12dp"
+            android:src="@drawable/ic_xp"
+            android:layout_gravity="center_vertical"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_user_coin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical" />
+
+        <ImageView
+            android:id="@+id/img_heart"
+            android:layout_width="@dimen/_16dp"
+            android:layout_height="@dimen/_16dp"
+            android:src="@drawable/ic_heart_red_1"
+            android:layout_gravity="center_vertical"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/txt_user_heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_8dp"
+            android:textSize="10sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical" />
+
+    </com.deificindia.indifun.ui.RoundCornerLinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_speaker"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_12dp"
+        android:layout_marginEnd="@dimen/_12dp"
+        android:src="@drawable/tool_speaker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemLayout1" />
+
+
+    <com.deificindia.indifun.deificpk.widgets.PkLayout
+        android:id="@+id/pk_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_8dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemLayout1" />
+
+    <!--full screen gift info-->
+    <LinearLayout
+        android:id="@+id/layout_gift_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pk_host_in_name_pad" />
+
+    <com.deificindia.indifun.deificpk.widgets.LiveBottomButtonLayout
+        android:id="@+id/pk_host_in_bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_bottom_layout_height"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <com.deificindia.indifun.deificpk.widgets.messeging.LiveRoomMessageView
+        android:id="@+id/message_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/default_message_layut"
+        app:layout_constraintTop_toBottomOf="@+id/guideline8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--default message layout-->
+    <LinearLayout
+        android:id="@+id/default_message_layut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_4dp"
+        android:paddingTop="@dimen/_4dp"
+        android:paddingRight="@dimen/_4dp"
+        android:paddingBottom="@dimen/_4dp"
+        app:layout_constraintBottom_toTopOf="@+id/pk_host_in_bottom_layout">
+
+        <RelativeLayout
+            android:id="@+id/play_mesg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_15sdp"
+            android:background="@drawable/bg_items_heart_xp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="@id/pk_host_in_bottom_layout"
+            app:layout_constraintBottom_toTopOf="@+id/pk_host_in_bottom_layout"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Hi"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_mesg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/bg_items_heart_xp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf
+                ="@id/pk_host_in_bottom_layout"
+            app:layout_constraintBottom_toTopOf="@+id/pk_host_in_bottom_layout"
+            app:layout_constraintLeft_toRightOf="@id/play_mesg"
+            tools:ignore="MissingConstraints" >
+            <TextView
+                android:id="@+id/msg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Like you"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/play_mesg3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@drawable/bg_items_heart_xp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf
+                ="@id/pk_host_in_bottom_layout"
+            app:layout_constraintBottom_toTopOf="@+id/pk_host_in_bottom_layout"
+            app:layout_constraintLeft_toRightOf="@id/play_mesg2"
+            tools:ignore="MissingConstraints" >
+            <TextView
+                android:id="@+id/msg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="How are you?"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_calling_users1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/buttonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_speaker">
+
+        <LinearLayout
+            android:id="@+id/layCloseCall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txt_closeCalls"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/close_all_calls"/>
+
+            <ImageView
+                android:id="@+id/imgCloseCall"
+                android:layout_width="@dimen/_42dp"
+                android:layout_height="@dimen/_42dp"
+                android:padding="@dimen/_12dp"
+                android:src="@drawable/ic_close_icon"
+                android:visibility="visible"
+                app:tint="@color/white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_calling_users"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layCloseCall"
+            />
+
+    </RelativeLayout>
+
+    <com.deificindia.indifun.deificpk.widgets.LiveMessageEditLayout
+        android:id="@+id/message_edit_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_message_edit_height"
+        android:paddingTop="@dimen/live_message_text_margin"
+        android:paddingBottom="@dimen/live_message_text_margin"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!--pk call option-->
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginEnd="@dimen/_12dp"
+        app:layout_constraintBottom_toTopOf="@+id/pk_host_in_bottom_layout"
+        app:layout_constraintEnd_toEndOf="parent">
+
+<!--        <com.airbnb.lottie.LottieAnimationView-->
+<!--            android:id="@+id/buy_gifts"-->
+<!--            android:layout_width="@dimen/live_pk_start_button_size"-->
+<!--            android:layout_height="@dimen/live_pk_start_button_size"-->
+<!--            app:lottie_loop="true"-->
+<!--            app:lottie_autoPlay="true"-->
+<!--            app:lottie_fileName="gifts.json" />-->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/start_calling_button"
+            android:layout_width="@dimen/live_pk_start_button_size"
+            android:layout_height="@dimen/live_pk_start_button_size"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="61708-red-call-button.json"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/start_pk_button"
+            android:layout_width="@dimen/live_pk_start_button_size"
+            android:layout_height="@dimen/live_pk_start_button_size"
+            app:lottie_loop="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="12585-pk.json" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layout_gift_heart_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/liveStreaming_fullscreenGift"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitCenter"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/layout_heart_animation_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal" />
+
+    <FrameLayout
+        android:id="@+id/topFrame_activity_indi_live"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--<com.deificindia.indifun.deificpk.animutils.AnimationPlayer
+        android:id="@+id/animationPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>-->
+
+    <include
+        android:id="@+id/animation_layout"
+        layout="@layout/layout_animation_items"/>
+
+
+    <LinearLayout
+        android:id="@+id/play_heart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="#00FFFFFF"
+        android:visibility="visible"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

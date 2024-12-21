@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/golden_yellow">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/golden_yellow_2"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_16dp"
+            android:paddingTop="@dimen/_16dp"
+            android:paddingRight="@dimen/_16dp"
+            android:paddingBottom="@dimen/_16dp">
+
+            <ImageView
+                android:id="@+id/crash_error_activity_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@null"
+                android:scaleType="fitXY"
+                android:src="@drawable/crash_ic_bug_report" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:gravity="center"
+                android:text="@string/customactivityoncrash_error_activity_error_occurred_explanation"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/crash_error_activity_restart_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:background="@drawable/bg_button_click_yellow_2"
+                android:text="@string/customactivityoncrash_error_activity_close_app"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/crash_error_activity_more_info_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_16dp"
+                android:background="@drawable/bg_button_click_red"
+                android:drawableStart="@drawable/crash_ic_error"
+                android:drawablePadding="@dimen/_8dp"
+                android:paddingStart="@dimen/_24dp"
+                android:paddingEnd="@dimen/_24dp"
+                android:text="@string/customactivityoncrash_error_activity_error_details"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

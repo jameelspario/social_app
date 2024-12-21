@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "373937733869",
+    "project_id": "test-fd77a",
+    "storage_bucket": "test-fd77a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373937733869:android:9af1f869345ec43ee90ce4",
+        "android_client_info": {
+          "package_name": "com.deificindia.indifun"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373937733869-vdr1vppucn0kb87ojhi4nd1rdgbs4ird.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvnylSF1cJqWw8FX9OaNrPsx5V752UGqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373937733869-vdr1vppucn0kb87ojhi4nd1rdgbs4ird.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:373937733869:android:7df7359b1c1b1fbce90ce4",
+        "android_client_info": {
+          "package_name": "com.spario.twiliotest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "373937733869-vdr1vppucn0kb87ojhi4nd1rdgbs4ird.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvnylSF1cJqWw8FX9OaNrPsx5V752UGqA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "373937733869-vdr1vppucn0kb87ojhi4nd1rdgbs4ird.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

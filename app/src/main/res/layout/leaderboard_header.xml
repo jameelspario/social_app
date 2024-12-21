@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/white" />
+
+        <TextView
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:id="@+id/txt_header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_16dp"
+            android:text="Leader Board"
+            android:layout_toEndOf="@+id/img_back"
+            android:layout_toStartOf="@+id/txtmenu"
+            android:fontFamily="@font/opensans_semibold"/>
+
+        <TextView
+            android:id="@+id/txtmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Ranking"
+            android:layout_alignParentEnd="true"
+            android:drawableRight="@drawable/ic_arrow_drop_down"
+            android:fontFamily="@font/opensans_semibold"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_5dp"
+    android:paddingBottom="@dimen/_5dp"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin">
+
+    <com.deificindia.indifun.ui.AgoraLvl
+        android:id="@+id/tagLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_marginEnd="@dimen/_5dp"/>
+
+    <com.deificindia.indifun.ui.AgoraLvl
+        android:id="@+id/tagDiamond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:visibility="visible"
+        android:layout_toEndOf="@+id/tagLevel"/>
+
+    <com.deificindia.indifun.ui.AgoraLvl
+        android:id="@+id/tagHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:layout_marginEnd="@dimen/_5dp"
+        android:visibility="visible"
+        android:layout_toEndOf="@+id/tagDiamond"/>
+
+    <com.deificindia.indifun.ui.AgoraLvl
+        android:id="@+id/tagStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5dp"
+        android:visibility="visible"
+        android:layout_toEndOf="@+id/tagHeart"/>
+
+</LinearLayout>

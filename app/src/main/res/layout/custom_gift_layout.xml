@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="320dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_turntable_prepare"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:id="@+id/closeall"
+               android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:src="@drawable/ic_close_dialog_nor_24px"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You need to buy coin first..click on upgrade to buy coins."
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/text"
+                android:layout_below="@id/closeall"
+                android:fontFamily="sans-serif-black"
+                android:textSize="15sp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_below="@id/text"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="@dimen/_100dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gift_pack_is_worth"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:id="@+id/userlevel"
+                    android:fontFamily="sans-serif-black"
+                    android:textSize="12sp"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_160dp"
+                    android:src="@drawable/gift_anim_bell"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_alignParentBottom="true">
+            <Button
+                android:layout_width="@dimen/_120dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/buy_now"
+                android:textColor="@color/white"
+                android:id="@+id/upgrade"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/giftlayout_button"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

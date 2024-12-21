@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_above="@+id/bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-7dp"
+            android:background="#00ECECEC"
+            android:gravity="top|center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/NotiBack"
+                android:layout_width="47dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp"
+                app:srcCompat="@drawable/arrow_back"
+                app:tint="@color/black" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_marginLeft="-25dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/opensans_semibold"
+                android:gravity="center_vertical"
+                android:text="Moment notification"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:transitionName="@string/trans_layout_moment_notification"
+                android:layout_margin="@dimen/_4dp"
+                android:elevation="@dimen/_50dp"
+                app:cardCornerRadius="@dimen/_4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="67dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <com.deificindia.indifun.ui.CircleImageView
+                                android:id="@+id/mypic"
+                                android:layout_width="@dimen/_50dp"
+                                android:layout_height="@dimen/_50dp"
+                                android:layout_margin="@dimen/_10dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/myname"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/_10dp"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:text="Name"
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/_15dp"
+                                    android:textStyle="bold" />
+
+                                <!--<TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/_10dp"
+                                    android:text=" was Like your pic."
+                                    android:textColor="@color/gray"
+                                    android:textSize="@dimen/_15dp" />-->
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tagslayout"
+                                android:orientation="horizontal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right">
+
+                            <TextView
+                                android:id="@+id/liketiming"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:gravity="bottom"
+                                android:text="10:00 PM"
+                                android:layout_margin="@dimen/_10dp"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/imagelayout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/hotpostdp"/>
+
+                        <TextView
+                            android:id="@+id/tvWatsap"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_8dp"
+                            android:maxLines="1"
+                            app:layout_constraintTop_toBottomOf="@+id/imagelayout"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.deificindia.indifun.ui.LikeCommentPanel
+                            android:id="@+id/like_commentPanel"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintTop_toBottomOf="@+id/datelay"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/like_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_10dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/comment_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_margin="@dimen/_10dp"/>
+
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="right">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/NotiTab"
+                    style="@style/tabLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    app:tabGravity="start"
+                    app:tabIndicatorColor="@color/colorPrimaryDark"
+                    app:tabIndicatorHeight="5dip"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="auto"
+                    app:tabSelectedTextColor="@color/colorPrimaryDark"
+                    app:tabTextAppearance="@style/tabLayoutStyle"
+                    app:tabTextColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>-->
+
+        <!--<androidx.viewpager.widget.ViewPager
+            android:id="@+id/NotiViewpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5dp" />-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/_55dp"
+        android:background="#FFFFFF"
+        android:paddingStart="@dimen/_12dp"
+        android:paddingEnd="@dimen/_12dp"
+        android:orientation="horizontal">
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/emojicon_edit_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:imeOptions="actionSend"
+            android:gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/sendButton"
+            android:inputType="text"
+            android:hint="say something..."
+            android:background="@null"
+            android:paddingTop="@dimen/_10dp"
+            app:emojiconSize="28sp"/>
+
+        <ImageView
+            android:id="@+id/sendButton"
+            android:layout_width="@dimen/_32dp"
+            android:layout_height="@dimen/_32dp"
+            android:clickable="true"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:contentDescription="@null"
+            android:background="@drawable/ic_send_togglable"
+            android:focusable="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

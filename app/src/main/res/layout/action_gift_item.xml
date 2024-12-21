@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/live_room_action_sheet_text_margin"
+    android:paddingTop="@dimen/live_room_gift_action_sheet_item_padding"
+    android:paddingBottom="@dimen/live_room_gift_action_sheet_item_padding"
+    android:background="@drawable/action_sheet_gift_item_bg">
+    <FrameLayout
+        android:id="@+id/live_room_action_sheet_gift_item_icon"
+        android:layout_width="@dimen/live_room_gift_action_sheet_icon_size"
+        android:layout_height="@dimen/live_room_gift_action_sheet_icon_size"
+        android:layout_gravity="center_horizontal">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_12dp"/>
+    </FrameLayout>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/live_room_action_sheet_gift_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:maxLines="1"
+        android:textColor="@color/gift_item_text_color"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/coin2"
+            android:layout_marginEnd="4dp"
+            android:layout_gravity="center_vertical"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/live_room_action_sheet_gift_item_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/gift_item_text_color"/>
+    </LinearLayout>
+</LinearLayout>

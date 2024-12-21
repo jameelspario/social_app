@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:elevation="1dp"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:id="@+id/lay_friend"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/trans_profile_item_zoom"
+        android:gravity="center"
+        android:background="@drawable/f_bg"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/friends1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/tv_trans_fffg_friend"
+            android:transitionName="trans_fffg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Friends"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_following"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/trans_profile_item_zoom"
+        android:gravity="center"
+        android:background="@drawable/f_bg"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/following1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/tv_trans_fffg_following"
+            android:transitionName="trans_fffg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Following"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_followers"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/trans_profile_item_zoom"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/followers1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:id="@+id/tv_trans_fffg_followers"
+            android:transitionName="trans_fffg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Followers"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_groups"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:transitionName="@string/trans_profile_item_zoom"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/groups1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="0"
+            android:textStyle="bold"
+            android:textSize="@dimen/_20sdp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Groups"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

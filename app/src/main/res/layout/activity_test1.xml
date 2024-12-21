@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.Test1Activity">
+
+
+    <FrameLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+     <!--   <com.deificindia.indifun.ui.BubbleEmitterView
+            android:id="@+id/bubble"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>-->
+
+       <!-- <com.deificindia.indifun.agorlive.ui.animui.ImageFloatView
+            android:id="@+id/bloatview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <com.deificindia.indifun.agorlive.ui.animui.GiftAnim
+            android:id="@+id/giftanim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+-->
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/simpledrawee"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            />
+    </FrameLayout>
+
+   <!-- <com.deificindia.indifun.deificpk.widgets.PkLayout
+        android:id="@+id/pk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/buttons"/>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"/>
+        <EditText
+            android:id="@+id/txt22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="update"
+            android:text="pp"/>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBubble"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBubble2"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBubble3"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onBubble4"/>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/scroll"
+    tools:context=".fragments.ProfileFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/contr"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/profile_header"/>
+
+            <TextView
+                android:id="@+id/profilecompletepercentage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:text="Your profile currently is 40% complete, polish up to make friend easier."
+                android:textColor="@color/tw__composer_red"
+                android:visibility="visible" />
+
+            <include
+                layout="@layout/profile_follow" />
+
+            <include
+                layout="@layout/profile_wallet"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:visibility="gone"
+                android:id="@+id/req_pay"
+                >
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:textAlignment="center"
+                    android:id="@+id/pay_request"
+                    android:background="@color/colorPrimary"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="@color/white_text"
+                    android:text="@string/Req_pay"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_10dp"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/messageLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="@string/trans_profile_item_zoom"
+                    android:layout_marginRight="2.5dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_message"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/ic_chat"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_trans_name_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Message"
+                        android:textSize="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/userlevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:transitionName="@string/trans_profile_item_zoom"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_level"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/stars"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_trans_name_level"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Level"
+                        android:textSize="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_broadcastswathched"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="@string/trans_profile_item_zoom"
+                    android:layout_marginLeft="2.5dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_broadcast_watch"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/play_circle"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_trans_name_broadcast_watch"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Boradcast Watch"
+                        android:textSize="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:visibility="gone"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/rl_medalshall"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginRight="2.5dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/ic_chat"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:padding="10dp"
+                        android:text="Hall"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/play_circle"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:padding="10dp"
+                        android:text="Boradcast Watch"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_aristocracycenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="2.5dp"
+                    android:gravity="center"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/group"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:padding="10dp"
+                        android:text="Aristocracy"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginStart="@dimen/_4dp"
+                android:layout_marginEnd="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_4dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/rl_mall"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_profile_option"
+                    android:gravity="center"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/img_block"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/ic_block_user"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_block"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="Blocked Users"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/onlinecustomerrl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="@string/trans_profile_item_zoom"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_online_service"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/headset"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_online_customer_service_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Online Service"
+                        android:textSize="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/rl_setting"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:transitionName="@string/trans_profile_item_zoom"
+                    android:gravity="center"
+                    android:layout_marginLeft="2dp"
+                    android:background="@drawable/bg_profile_option"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/img_setting"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/settings"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_trans_name_setting"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="Setting"
+                        android:textSize="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                 android:weightSum="3">
+
+               <LinearLayout
+                    android:id="@+id/rl_mall1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_profile_option"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/follown"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/ic_user"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/tv_bl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="Follow Notification"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/rechargecoinsrl"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_profile_option"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/icon_rechargecoins"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/wallet"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_rechargecoins"
+                        android:padding="10dp"
+                        android:text="Wallet"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:textColor="@color/black" />
+
+                </LinearLayout>
+  <LinearLayout
+                    android:id="@+id/click_cashout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_profile_option"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/icon_rechargecoins1"
+          android:layout_centerVertical="true"
+          android:src="@drawable/wallet"/>
+                <TextView
+                    android:id="@+id/click_cashout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:paddingStart="@dimen/_21dp"
+                    android:paddingTop="@dimen/_6dp"
+                    android:paddingEnd="@dimen/_21dp"
+                    android:paddingBottom="@dimen/_6dp"
+                    android:text="Income"
+                    android:textColor="@color/black"
+                    android:transitionName="@string/trans_profile_item_zoom" />
+  </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_100dp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_4dp"
+                android:layout_marginBottom="@dimen/_8dp"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/aristrocracy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_profile_option"
+                    android:gravity="center"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_2dp"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <ImageView
+                        android:id="@+id/aristrocracy1"
+                        style="@style/ImageViewIconSize"
+                        android:src="@drawable/ic_user"
+                        android:transitionName="@string/tool_bar_image"/>
+
+                    <TextView
+                        android:id="@+id/aristrocracy2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:transitionName="@string/tool_bar_text"
+                        android:layout_toRightOf="@+id/icon_rechargecoins"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        android:text="Aristrocracy"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_15sdp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

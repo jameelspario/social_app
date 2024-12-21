@@ -1,0 +1,23 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    tools:context="com.deificindia.firebasefragment.FollowingFragmentFire">
+
+    <com.deificindia.indifun.ui.OrientationAwareRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layoutAnimation="@anim/layout_animator" />
+    <com.deificindia.indifun.ui.LoadingAnimView
+        android:layout_width="match_parent"
+        android:id="@+id/loading"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        />
+</FrameLayout>

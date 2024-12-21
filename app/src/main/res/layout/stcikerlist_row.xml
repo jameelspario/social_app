@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="@dimen/_100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_100dp"
+            android:layout_height="@dimen/_130dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="@dimen/_10dp">
+            <ImageView
+                android:id="@+id/stickercovers"
+                android:layout_width="@dimen/_100dp"
+                android:layout_height="@dimen/_100dp"
+                android:layout_gravity="center_horizontal"
+                android:adjustViewBounds="true"
+                android:padding="@dimen/_1dp"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/stars" />
+        </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/stickername"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:text="@string/nostickers"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</LinearLayout>

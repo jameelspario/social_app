@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_300dp"
+    android:padding="1dp"
+    android:layout_height="wrap_content">
+
+    <com.deificindia.indifun.ui.CircleImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/profile_image"
+        android:src="@drawable/ic_user"/>
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@id/profile_image"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:background="@drawable/background_left"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="hello"
+        android:id="@+id/show_message"
+        android:textSize="18sp"
+        android:padding="8dp"
+        />
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/message_image_layout"
+        android:layout_width="@dimen/_200dp"
+        android:layout_height="@dimen/_200dp"
+        android:src="@drawable/ic_user"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_below="@+id/show_message"
+        android:visibility="visible"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_seen"
+        android:visibility="gone"
+        android:layout_below="@id/show_message"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/gettime"
+        android:text="9.30am"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:layout_below="@id/show_message"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:layout_gravity="end"
+        android:layout_height="wrap_content">
+
+    </TextView>
+</LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

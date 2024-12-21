@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg_bottom_sheet_gift"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/live_room_gift_action_sheet_height">
+
+    <RelativeLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/live_room_action_sheet_gift_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_room_action_sheet_text_item_height"
+            android:textAlignment="gravity"
+            android:gravity="center"
+            android:text="@string/live_room_gift_action_sheet_title"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/white"/>
+
+        <View
+            android:id="@+id/devider"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_room_action_sheet_item_divider_height"
+            android:layout_marginTop="@dimen/_5dp"
+            android:layout_below="@+id/live_room_action_sheet_gift_title"
+            android:background="@color/transparent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/live_room_action_sheet_gift_send_btn"
+            android:layout_width="@dimen/live_room_gift_action_sheet_send_btn_width"
+            android:layout_height="@dimen/live_room_action_sheet_text_item_height_32"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_button_click_yellow_2"
+            android:gravity="center"
+            android:text="@string/live_room_gift_action_sheet_send"
+            android:textAlignment="gravity"
+            android:textColor="@color/live_action_button_text_color"
+            android:textSize="@dimen/text_size_normal" />
+
+    </RelativeLayout>
+
+    <com.deificindia.indifun.ui.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_below="@+id/appbar"
+        app:pstsIndicatorColor="@color/golden_yellow" />
+    <!--<com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabTextColor="@color/white"
+        android:layout_below="@+id/appbar">
+
+    </com.google.android.material.tabs.TabLayout>-->
+
+   <!-- <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout">-->
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabs"/>
+
+  <!--  </androidx.core.widget.NestedScrollView>
+-->
+
+
+
+</RelativeLayout>

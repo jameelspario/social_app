@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_background"
+    android:layout_marginStart="@dimen/_24dp"
+    android:layout_marginEnd="@dimen/_24dp">
+
+    <TextView
+        android:id="@+id/txthead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change pk duration"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif"
+        android:padding="@dimen/_8dp"/>
+
+    <TextView
+        android:id="@+id/txtbody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Choose a time from list to start pk."
+        android:layout_below="@+id/txthead"
+        android:gravity="center"
+        android:fontFamily="sans-serif"
+        android:padding="@dimen/_8dp"/>
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtbody"
+        android:orientation="horizontal">
+
+        <CheckedTextView
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableStart="@drawable/icon_remain_time"
+            android:drawableTint="@color/gray"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="3 mint."
+            android:textColor="@color/black" />
+
+        <CheckedTextView
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/icon_remain_time"
+            android:drawableTint="@color/gray"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="5 mint."
+            android:textColor="@color/gray" />
+
+        <CheckedTextView
+            android:id="@+id/btn10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/icon_remain_time"
+            android:drawableTint="@color/gray"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="10 mint."
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/timeLayout"
+        android:background="@color/gray_lightest"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_button_height"
+        android:layout_below="@id/dialog_divider"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_negative_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dialog_negative_button"
+            android:textSize="@dimen/text_size_normal"
+            android:textAlignment="gravity"
+            android:fontFamily="sans-serif"
+            android:gravity="center"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_lightest"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_positive_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/dialog_positive_button"
+            android:fontFamily="sans-serif"
+            android:textSize="@dimen/text_size_normal"
+            android:textAlignment="gravity"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

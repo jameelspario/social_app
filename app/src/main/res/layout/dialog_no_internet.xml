@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/content"
+        android:orientation="vertical"
+        android:layout_width="175dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/white"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/_10dp"
+            android:background="@android:color/holo_purple">
+            <ImageView
+                android:id="@+id/imgicon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/no_internet"
+                android:backgroundTint="@color/white"
+                android:scaleType="fitXY"
+               android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Internet Not Connected !"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/white"
+                android:background="@android:color/holo_purple"
+                android:textAllCaps="false"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_below="@+id/imgicon"
+                android:textSize="18dp"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No Internet Connetion"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/design_default_color_error"
+                android:textAllCaps="false"
+                android:layout_marginTop="10dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="16sp"
+                />
+
+                <LinearLayout
+                    android:id="@+id/lyt_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@android:color/holo_purple"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/btn_retry_connection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Retry"
+                        android:padding="@dimen/_10dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textAllCaps="true"
+                        android:textSize="18dp"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgClose"
+        android:layout_width="@dimen/_50dp"
+        android:layout_height="@dimen/_50dp"
+        android:padding="@dimen/_10dp"
+        android:src="@drawable/ic_close_icon"
+        android:layout_toEndOf="@+id/content"
+        android:translationZ="@dimen/_10dp"
+        app:tint="@color/white"/>
+
+</RelativeLayout>

@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <stroke android:width="@dimen/live_room_action_sheet_button_border" android:color="@color/gift_selected_stroke_color"/>
+    <corners android:radius="@dimen/live_room_gift_action_sheet_item_bg_corner"/>
+    <solid android:color="@color/gift_selected_solid_color"/>
+</shape>

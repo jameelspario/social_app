@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/pk_host_pk_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"/>
+
+    <RelativeLayout
+        android:id="@+id/leftContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_yellow_red_gradient_1"
+        app:layout_constraintBottom_toTopOf="@+id/layout_progress"
+        app:layout_constraintEnd_toStartOf="@+id/guide_vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.twilio.video.VideoView
+            android:id="@+id/pk_host_video_layout_left_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:tviMirror="true"
+            app:tviOverlaySurface="true"/>
+
+        <ImageView
+            android:id="@+id/pk_left_background_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image_3"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/pk_left_background_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rightContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_yellow_red_gradient_1"
+        app:layout_constraintBottom_toTopOf="@+id/layout_progress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guide_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.twilio.video.VideoView
+            android:id="@+id/pk_host_video_layout_right_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:tviMirror="true"
+            app:tviOverlaySurface="true" />
+
+        <ImageView
+            android:id="@+id/pk_right_background_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/profile_image_3"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/pk_right_background_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pk_host_remaining_time_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/live_pk_remaining_time_layout_height"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/live_pk_video_layout_other_host_name_margin_bottom_00"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/round_scalable_gray_bg">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="@dimen/live_pk_remaining_time_layout_height"
+            android:layout_height="@dimen/live_pk_remaining_time_layout_height"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="stop-watch-yellow.json"
+            app:lottie_loop="true"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAlignment="gravity"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="@dimen/live_pk_remaining_time_text_margin"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"
+            android:text="@string/live_pk_host_remaining_time_hint"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pk_host_remaining_time_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="gravity"
+            android:gravity="center_vertical"
+            android:layout_marginEnd="@dimen/live_pk_progress_layout_countdown_margin_end"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_small"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_remote_owner_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/live_pk_video_layout_other_host_name_margin_bottom_00"
+        android:layout_marginBottom="@dimen/live_pk_video_layout_other_host_name_margin_bottom_00"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/layout_right_seat"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.deificindia.indifun.deificpk.widgets.LiveRemoteHostNameLayout
+            android:id="@+id/pk_video_layout_other_host_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_speakerPk"
+        android:layout_width="@dimen/_32dp"
+        android:layout_height="@dimen/_32dp"
+        android:src="@drawable/tool_speaker"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_12dp"
+        android:layout_marginTop="@dimen/_12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/activity_horizontal_margin_8dp"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin_8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pk_progress_left_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/live_pk_progress_layout_height"
+            android:background="@drawable/pk_blue_progress_bg"
+            android:gravity="center_vertical|start"
+            android:paddingStart="@dimen/live_pk_progress_text_margin"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_progress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/pk_progress_right_text"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/live_pk_progress_layout_height"
+            android:background="@drawable/pk_red_progrss_bg"
+            android:gravity="center_vertical|end"
+            android:paddingEnd="@dimen/live_pk_progress_text_margin"
+            android:textAlignment="gravity"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_medium"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guide_progress"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_on_progress"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:scaleType="centerCrop"
+            app:lottie_autoPlay="true"
+            android:visibility="visible"
+            app:lottie_fileName="rangoli-for-diwali.json"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/guide_progress"
+            app:layout_constraintStart_toStartOf="@+id/guide_progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_loop="true"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_pk_vs1"
+        android:layout_width="@dimen/live_pk_vs_icon_size"
+        android:layout_height="@dimen/live_pk_vs_icon_size"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_pk_vs"
+        app:layout_constraintBottom_toTopOf="@+id/layout_progress"
+        app:layout_constraintEnd_toEndOf="@+id/guide_vertical"
+        app:layout_constraintStart_toStartOf="@+id/guide_vertical"/>
+
+    <LinearLayout
+        android:id="@+id/layout_left_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/leftContainer" >
+
+        <com.deificindia.indifun.deificpk.widgets.TopSenderSeatWidget
+            android:id="@+id/left_top_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            app:tssw_type="0" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_right_seat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/rightContainer">
+
+        <com.deificindia.indifun.deificpk.widgets.TopSenderSeatWidget
+            android:id="@+id/right_top_seat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_marginBottom="@dimen/_4dp"
+            app:tssw_type="1" />
+
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

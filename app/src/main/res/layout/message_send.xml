@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:id="@+id/re"
+        android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bottom"
+        />
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/bottom"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_8dp"
+            android:paddingBottom="@dimen/_8dp">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text_send"
+            android:hint="@string/type_a_message"
+            android:inputType="textMultiLine"
+            android:layout_gravity="center"
+            android:padding="@dimen/_12sdp"
+            android:layout_marginStart="@dimen/_16dp"
+            android:layout_marginEnd="@dimen/_8dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/opencam"
+            android:background="@drawable/comment_box"
+            android:textColor="@android:color/black" />
+        <ImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_action_attach"
+            android:id="@+id/opencam"
+            android:layout_gravity="center"
+            app:tint="@color/colorPrimary"
+            android:layout_marginStart="@dimen/_4dp"
+            android:layout_marginEnd="@dimen/_4dp"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/btn_send" />
+            <ImageView
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:src="@drawable/send"
+                android:id="@+id/btn_send"
+                android:visibility="visible"
+                app:tint="@color/colorPrimary"
+                android:layout_marginStart="@dimen/_2dp"
+                android:layout_marginEnd="@dimen/_16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+</RelativeLayout>
+

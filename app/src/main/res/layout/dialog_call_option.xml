@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_24dp"
+    android:layout_marginEnd="@dimen/_24dp"
+    android:background="@drawable/dialog_background">
+
+    <TextView
+        android:id="@+id/txthead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="@dimen/_8dp"
+        android:text="Start Call"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/txtbody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txthead"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:padding="@dimen/_8dp"
+        android:text="Choose the option and setting to start the call."
+        />
+
+    <LinearLayout
+        android:id="@+id/timeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtbody"
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingBottom="@dimen/_8dp">
+
+        <CheckedTextView
+            android:id="@+id/btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:drawableStart="@drawable/ic_call_end_white_24px"
+            android:drawablePadding="@dimen/_6dp"
+            android:drawableTint="@color/gray"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:text="Audio Call"
+            android:textColor="@color/gray" />
+
+        <CheckedTextView
+            android:id="@+id/btn5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/ic_videocam_white_24dp"
+            android:drawablePadding="@dimen/_6dp"
+            android:drawableTint="@color/gray"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:maxLines="1"
+            android:paddingStart="@dimen/_16dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:text="Video Call"
+            android:textColor="@color/gray" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/timeLayout"
+        android:background="@color/gray_lightest"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_button_height"
+        android:layout_below="@id/dialog_divider"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_negative_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/dialog_negative_button"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/text_size_normal"/>
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/gray_lightest"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_positive_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:text="@string/dialog_go_button"
+            android:textAlignment="gravity"
+            android:textSize="@dimen/text_size_normal"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>

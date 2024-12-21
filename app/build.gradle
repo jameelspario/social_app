@@ -1,0 +1,253 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+
+android {
+
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    packagingOptions{
+        exclude 'AndroidManifest.xml'
+        exclude 'lib/arm64-v8a/libcardioDecider.so'
+        exclude 'lib/arm64-v8a/libcardioRecognizer.so'
+        exclude 'lib/arm64-v8a/libcardioRecognizer_tegra2.so'
+        exclude 'lib/arm64-v8a/libopencv_core.so'
+        exclude 'lib/arm64-v8a/libopencv_imgproc.so'
+        exclude 'lib/armeabi/libcardioDecider.so'
+        exclude 'lib/armeabi-v7a/libcardioDecider.so'
+        exclude 'lib/armeabi-v7a/libcardioRecognizer.so'
+        exclude 'lib/armeabi-v7a/libcardirelease oRecognizer_tegra2.so'
+        exclude 'lib/armeabi-v7a/libopencv_core.so'
+        exclude 'lib/armeabi-v7a/libopencv_imgproc.so'
+        exclude 'lib/mips/libcardioDecider.so'
+        exclude 'lib/x86/libcardioDecider.so'
+        exclude 'lib/x86/libcardioRecognizer.so'
+        exclude 'lib/x86/libcardioRecognizer_tegra2.so'
+        exclude 'lib/x86/libopencv_core.so'
+        exclude 'lib/x86/libopencv_imgproc.so'
+        exclude 'lib/x86_64/libcardioDecider.so'
+        exclude 'lib/x86_64/libcardioRecognizer.so'
+        exclude 'lib/x86_64/libcardioRecognizer_tegra2.so'
+        exclude 'lib/x86_64/libopencv_core.so'
+        exclude 'lib/x86_64/libopencv_imgproc.so'
+    }
+    defaultConfig {
+        applicationId "com.deificindia.indifun"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments["room.incremental"] = "true"
+            }
+        }
+
+        def date = new Date();
+        def formattedDate = date.format('yyyy-MM-dd-HHmmss')
+        setProperty("archivesBaseName", "Indifun_" + versionName + "_"+formattedDate)
+
+    }
+
+    dataBinding {
+        enabled true
+    }
+
+   /* buildFeatures {
+        viewBinding true
+    }
+*/
+    dexOptions(){
+        incremental true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            ext.enableCrashlytics = false
+            ext.alwaysUpdateBuildId = false
+            crunchPngs false
+
+        }
+
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    configurations {
+        compile.exclude group: 'com.google.zxing'
+    }
+
+    useLibrary 'android.test.runner'
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.work:work-runtime:2.4.0'
+    implementation 'androidx.concurrent:concurrent-listenablefuture-callback:1.0.0-beta01'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'com.androidx.test:runner:1.1.0-alpha3'
+    //androidTestImplementation 'com.androidx.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.preference:preference:1.1.1'
+
+    def nav_version = "2.3.5"
+    // Java language implementation
+    implementation "androidx.navigation:navigation-fragment:$nav_version"
+    implementation "androidx.navigation:navigation-ui:$nav_version"
+
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+    implementation 'com.google.firebase:firebase-firestore:23.0.1'
+    implementation 'com.google.firebase:firebase-auth:21.0.1'
+    implementation 'com.google.firebase:firebase-analytics:19.0.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.0.1'
+    implementation 'com.google.firebase:firebase-messaging:20.0.0'
+    // Firestore FirebaseUI Library
+    implementation 'com.firebaseui:firebase-ui-firestore:7.1.1'
+
+    //Firebase Database
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+
+    // Paging Library
+    implementation 'android.arch.paging:runtime:1.0.1'
+
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'com.google.android.gms:play-services-vision:20.1.3'
+    //implementation 'com.google.android.material:material:1.3.0'
+    //implementation 'com.android.support:asynclayoutinflater:28.0.0'
+
+    implementation 'com.airbnb.android:lottie:3.5.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.6.1' /*2.5.14*/
+    implementation "com.github.skydoves:androidribbon:1.0.3"
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+    //image library by FB -- streaming of progressive JPEGs
+    //display of animated GIFs and WebPs
+    implementation 'com.facebook.fresco:fresco:2.3.0'
+    //implementation 'com.facebook.fresco:webpsupport:2.4.0'
+    implementation 'com.facebook.fresco:animated-webp:2.3.0'
+    implementation 'com.github.fevziomurtekin:Rainlayout:1.1'
+    //implementation 'com.github.penfeizhou.android.animation:awebp:2.4.2'
+
+    //retrofit
+    // retrofit, gson
+    implementation "com.squareup.retrofit2:retrofit:2.9.0" //261
+    implementation "com.squareup.retrofit2:converter-gson:2.7.2"
+    implementation 'com.squareup.retrofit2:converter-scalars:2.6.4'
+    implementation "com.squareup.okhttp3:okhttp:4.8.0"
+    implementation "com.squareup.okhttp3:logging-interceptor:4.8.0"
+    implementation 'com.squareup.okio:okio:2.7.0' //222
+
+    implementation 'android.arch.lifecycle:viewmodel:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    annotationProcessor 'android.arch.lifecycle:compiler:1.1.1'
+
+    implementation 'com.android.volley:volley:1.2.0'
+
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation "com.karumi:dexter:6.2.1"
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+
+    def glide_version = "4.11.0"
+    implementation ("com.github.bumptech.glide:glide:$glide_version") {
+        exclude group: "com.android.support"
+    }
+    implementation 'com.github.penfeizhou.android.animation:glide-plugin:2.4.2'
+
+    implementation 'com.github.hani-momanii:SuperNova-Emoji:1.1'
+    implementation 'tk.jamunx.ui:gallery:0.0.8'
+    implementation 'com.pixplicity.sharp:library:1.1.0'
+    //implementation 'com.fxn769:pix:1.5.4'
+    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'com.firebaseui:firebase-ui-database:7.1.1'
+
+    // Country Code Picker Library
+    implementation 'com.hbb20:ccp:2.4.1'
+
+
+    implementation 'com.github.nguyenhoanglam:ImagePicker:1.4.3'
+    implementation 'com.airbnb.android:lottie:3.5.0'
+    ///RxJava 3
+    //implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    //implementation 'io.reactivex.rxjava3:rxjava:3.0.0'
+    //implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.9'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.2'
+    implementation 'android.arch.paging:rxjava2:1.0.1'
+
+    implementation 'org.greenrobot:eventbus:3.2.0'
+
+    def room_version = "2.2.6"
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:$room_version"
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:$room_version"
+
+    implementation 'com.tomergoldst.android:tooltips:1.0.10'
+    implementation 'com.github.sephiroth74:android-target-tooltip:2.0.3'
+    implementation 'com.github.yyued:SVGAPlayer-Android:2.1.8'
+    implementation 'co.lujun:androidtagview:1.1.7'
+    implementation('io.socket:socket.io-client:1.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation 'com.github.yalantis:ucrop:2.2.2'
+    //implementation 'de.hdodenhof:circleimageview:3.1.0'
+    implementation 'com.kroegerama:bottomsheet-imagepicker:1.1.2'
+    implementation "com.github.skydoves:powermenu:2.1.9"
+
+    ///twilio---
+    implementation 'com.twilio:audioswitch:1.1.0'
+    implementation 'com.twilio:video-android:5.13.0'
+    //implementation "com.twilio:video-android:6.0.0-preview3"
+    //implementation 'org.webrtc:google-webrtc:1.0.0'
+    //implementation (name:'deific-beauty-9.2.1-2020-02-20', ext:'aar')
+
+    ///animation lib
+    implementation 'com.github.glomadrian:Grav:1.1'
+
+    implementation "io.karn:notify:1.3.0"
+    implementation "com.github.skydoves:transformationlayout:1.0.6"
+    //add this
+    implementation 'com.google.firebase:firebase-storage:20.0.0'
+    annotationProcessor 'com.google.auto.value:auto-value:1.5.2'
+    compileOnly 'com.jakewharton.auto.value:auto-value-annotations:1.4'
+    implementation 'com.gauravk.audiovisualizer:audiovisualizer:0.9.2'
+    implementation 'com.razorpay:checkout:1.6.4'
+    implementation 'com.elconfidencial.bubbleshowcase:bubbleshowcase:1.3.1'
+    //implementation 'com.github.mreram:showcaseview:1.2.0'
+
+    // debugImplementation because LeakCanary should only run in debug builds.
+    //debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+
+
+
+}

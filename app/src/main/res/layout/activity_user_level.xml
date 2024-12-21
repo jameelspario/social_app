@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:transitionName="@string/trans_profile_item_zoom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Activities.MessagesActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">>
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFC107"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/ulBack"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:transitionName="@string/tool_bar_image"
+                android:layout_gravity="center_vertical"
+                android:clickable="true"
+                android:padding="@dimen/_8dp"
+                app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+                app:tint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:background="#FFC107"
+                android:gravity="bottom|right">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/userLevelTab"
+                    style="@style/tabLayoutStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="42dp"
+                    app:tabGravity="fill"
+                    app:tabMode="fixed"
+                    app:tabIndicatorColor="#FFFFFF"
+                    app:tabIndicatorHeight="5dip"
+                    app:tabMaxWidth="0dp"
+                    app:tabSelectedTextColor="@color/common_google_signin_btn_text_dark_default"
+                    app:tabTextAppearance="@style/tabLayoutStyle"
+                    app:tabTextColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/ulViewpage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_income_graph.xml"
+    app:startDestination="@id/incomeFragment">
+
+    <fragment
+        android:id="@+id/incomeFragment"
+        android:name="com.deificindia.indifun.fragments.IncomeFragment"
+        android:label="fragment_income"
+        tools:layout="@layout/fragment_income" >
+        <action
+            android:id="@+id/action_incomeFragment_to_redeemFragment"
+            app:destination="@id/redeemFragment" />
+        <action
+            android:id="@+id/action_incomeFragment_to_transferToAccountFragment"
+            app:destination="@id/transferToAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redeemFragment"
+        android:name="com.deificindia.indifun.fragments.RedeemFragment"
+        android:label="fragment_redeem"
+        tools:layout="@layout/fragment_redeem" />
+    <fragment
+        android:id="@+id/transferToAccountFragment"
+        android:name="com.deificindia.indifun.fragments.TransferToAccountFragment"
+        android:label="fragment_transfer_to_account"
+        tools:layout="@layout/fragment_transfer_to_account" />
+</navigation>

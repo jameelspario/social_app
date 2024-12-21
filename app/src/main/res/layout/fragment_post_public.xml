@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.PostPublicFragment">
+
+   <com.deificindia.indifun.ui.swipe.SwipeRefreshLayout
+       android:id="@+id/swipe_refresh"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/hotlist"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:fastScrollEnabled="true"
+          android:background="@color/white"
+          app:fastScrollHorizontalThumbDrawable="@drawable/scroll_thumb_drawable"
+          app:fastScrollHorizontalTrackDrawable="@drawable/scroll_line_drawable"
+          app:fastScrollVerticalThumbDrawable="@drawable/scroll_thumb_drawable"
+          app:fastScrollVerticalTrackDrawable="@drawable/scroll_line_drawable"/>
+
+   </com.deificindia.indifun.ui.swipe.SwipeRefreshLayout>
+
+   <com.deificindia.indifun.ui.LoadingAnimView
+       android:id="@+id/lottieanim"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       />
+
+
+</FrameLayout>

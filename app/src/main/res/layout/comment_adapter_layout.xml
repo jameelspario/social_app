@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+   android:paddingStart="@dimen/_8dp"
+    android:paddingEnd="@dimen/_8dp"
+    android:paddingTop="@dimen/_4dp"
+    android:paddingBottom="@dimen/_4dp"
+    android:layout_gravity="center_horizontal">
+
+        <com.deificindia.indifun.ui.CircleImageView
+            android:id="@+id/whocommentimage"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/no_image" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/commentname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="5dp"
+                android:text="TextView"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:textColor="#0B0A0A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@+id/comenttime"/>
+
+            <TextView
+                android:id="@+id/maincomment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text=""
+                android:layout_below="@id/commentname"/>
+
+            <TextView
+                android:id="@+id/comenttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5dp"
+                android:layout_marginBottom="@dimen/_5dp"
+                android:text="TextView"
+                android:textAlignment="textEnd"
+                android:textColor="@color/gray"
+                android:textColorHighlight="@color/gray"
+                android:textSize="10sp"
+                android:paddingStart="@dimen/_4dp"
+                android:paddingEnd="@dimen/_4dp"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

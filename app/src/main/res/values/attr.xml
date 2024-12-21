@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="color_feature_invisible_mode" format="color">
+    </attr>
+    <attr name="textStyleP3Gray40" format="reference" />
+    <attr name="textStyleP1" format="reference" />
+    <attr name="textStyleP1Inverse" format="reference">
+    </attr>
+    <attr name="textStyleP1Gray60" format="reference" />
+    <attr name="textStyleH2" format="reference">
+    </attr>
+
+    <!--spario edit-->
+    <declare-styleable name="ImageArea">
+        <attr name="ia_src" format="integer"/>
+        <attr name="ia_imageonly" format="boolean"/>
+        <attr name="ia_textonly" format="boolean"/>
+        <attr name="ia_imagesize" format="dimension"/>
+        <attr name="ia_title" format="string"/>
+        <attr name="ia_text_color" format="integer"/>
+        <attr name="ia_left" format="integer"/>
+        <attr name="ia_top" format="integer"/>
+        <attr name="ia_right" format="integer"/>
+        <attr name="ia_bottom" format="integer"/>
+        <attr name="ia_padding" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="Dialog">
+        <attr name="DialogTitleAppearance" format="reference" />
+        <attr name="DialogTitleText" format="reference|string" />
+        <attr name="DialogSpotColor" format="reference|color"/>
+        <attr name="DialogSpotCount" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="SpaceNavigationView">
+        <attr name="space_item_icon_size" format="dimension" />
+        <attr name="space_item_icon_only_size" format="dimension" />
+        <attr name="space_item_text_size" format="dimension" />
+        <attr name="space_background_color" format="color" />
+        <attr name="centre_button_color" format="color" />
+        <attr name="active_item_color" format="color" />
+        <attr name="inactive_item_color" format="color" />
+        <attr name="centre_button_icon" format="reference" />
+        <attr name="active_centre_button_icon_color" format="color" />
+        <attr name="inactive_centre_button_icon_color" format="color" />
+        <attr name="active_centre_button_background_color" format="color"/>
+        <attr name="centre_part_linear" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="LikeButton">
+        <attr name="icon_type" format="string" />
+        <attr name="icon_size" format="dimension|reference"/>
+        <attr name="like_drawable" format="reference" />
+        <attr name="unlike_drawable" format="reference" />
+        <attr name="dots_primary_color" format="color|reference" />
+        <attr name="dots_secondary_color" format="color|reference" />
+        <attr name="circle_start_color" format="color|reference" />
+        <attr name="circle_end_color" format="color|reference" />
+        <attr name="liked" format="boolean"/>
+        <attr name="is_enabled" format="boolean"/>
+        <attr name="anim_scale_factor" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="PagerBullet">
+        <attr name="panelHeightInDp" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="pstsIndicatorColor" format="color" />
+        <attr name="pstsUnderlineColor" format="color" />
+        <attr name="pstsDividerColor" format="color" />
+        <attr name="pstsIndicatorHeight" format="dimension" />
+        <attr name="pstsUnderlineHeight" format="dimension" />
+        <attr name="pstsDividerPadding" format="dimension" />
+        <attr name="pstsTabPaddingLeftRight" format="dimension" />
+        <attr name="pstsScrollOffset" format="dimension" />
+        <attr name="pstsTabBackground" format="reference" />
+        <attr name="pstsShouldExpand" format="boolean" />
+        <attr name="pstsTextAllCaps" format="boolean" />
+    </declare-styleable>
+
+    <attr name="popupTextAlignment" format="enum">
+        <enum name="start" value="0" />
+        <enum name="end" value="1" />
+        <enum name="center" value="2" />
+    </attr>
+
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="arrowDrawable" format="reference|color" />
+        <attr name="dropDownListPaddingBottom" format="dimension" />
+        <attr name="backgroundSelector" format="integer" />
+        <attr name="textTint" format="color" />
+        <attr name="popupTextAlignment" />
+        <attr name="entries" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageListView">
+        <attr name="viewType" format="enum" >
+            <enum name="CIRCULAR" value="1"/>
+            <enum name="RECT" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TAGView">
+        <attr name="tag_icon" format="reference"/>
+        <attr name="tag_text" format="string"/>
+        <attr name="tag_text_color" format="color"/>
+        <attr name="tag_text_size" format="dimension"/>
+        <attr name="tag_stroke_width" format="dimension"/>
+        <attr name="tag_color" format="color"/>
+        <attr name="tag_radius" format="dimension"/>
+        <attr name="tag_image_width" format="dimension"/>
+        <attr name="tag_divider" format="dimension"/>
+        <attr name="tag_padding" format="dimension"/>
+        <attr name="tag_padding_top" format="dimension"/>
+        <attr name="tag_padding_bottom" format="dimension"/>
+        <attr name="tag_padding_left" format="dimension"/>
+        <attr name="tag_padding_right" format="dimension"/>
+        <attr name="tag_as_circle" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="ChipView">
+        <attr name="label" format="string" />
+        <attr name="labelColor" format="color" />
+        <attr name="hasAvatarIcon" format="boolean" />
+        <attr name="avatarIcon" format="reference" />
+        <attr name="deletable" format="boolean" />
+        <attr name="deleteIcon" format="reference" />
+        <attr name="deleteIconColor" format="color" />
+        <attr name="backgroundColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="ClearableEditText">
+        <attr name="clearIcon" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="MyTextView">
+        <attr name="font" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="LuckyWheelView">
+        <attr name="lkwBackgroundColor" format="color" />
+        <attr name="lkwCursor" format="reference" />
+        <attr name="lkwCenterImage" format="reference" />
+        <attr name="lkwEdgeColor" format="color" />
+        <attr name="lkwEdgeWidth" format="integer" />
+        <attr name="lkwTopTextColor" format="color" />
+        <attr name="lkwTopTextPadding" format="dimension" />
+        <attr name="lkwTopTextSize" format="dimension" />
+        <attr name="lkwSecondaryTextSize" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="easy_flip_view">
+        <attr name="flipOnTouch" format="boolean"/>
+        <attr name="flipDuration" format="integer"/>
+        <attr name="flipType" format="string"/>
+        <attr name="flipFrom" format="string"/>
+        <attr name="flipEnabled" format="boolean"/>
+        <attr name="flipOnceEnabled" format="boolean"/>
+        <attr name="autoFlipBack" format="boolean"/>
+        <attr name="autoFlipBackTime" format="integer"/>
+        <attr name="animFlipInId" format="reference"/>
+        <attr name="animFlipOutId" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="EmojiRainLayout">
+        <attr name="per" format="integer"/>
+        <attr name="duration" format="integer"/>
+        <attr name="dropDuration" format="integer"/>
+        <attr name="dropFrequency" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="AlphaMovieView">
+        <attr name="alphaColor" format="color" />
+        <attr name="shader" format="string" />
+        <attr name="accuracy" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="BubbleLayout">
+        <attr name="bl_arrowWidth" format="dimension|reference" />
+        <attr name="bl_cornersRadius" format="dimension|reference" />
+        <attr name="bl_arrowHeight" format="dimension|reference" />
+        <attr name="bl_arrowPosition" format="dimension|reference" />
+        <attr name="bl_bubbleColor" format="color|reference" />
+        <attr name="bl_strokeWidth" format="dimension|reference" />
+        <attr name="bl_strokeColor" format="color|reference" />
+
+        <attr name="bl_arrowDirection" format="enum">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="top" value="2" />
+            <enum name="bottom" value="3" />
+            <enum name="left_center" value="4"/>
+            <enum name="right_center" value="5"/>
+            <enum name="top_center" value="6"/>
+            <enum name="bottom_center" value="7"/>
+            <enum name="top_right" value="8"/>
+            <enum name="bottom_right" value="9"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerLinearLayout">
+
+        <attr name="rcll_corner" format="float"/>
+        <attr name="rcll_startcolor" format="integer"/>
+        <attr name="rcll_endcolor" format="integer"/>
+
+    </declare-styleable>
+
+    <declare-styleable name="TopSenderSeatWidget">
+        <attr name="tssw_type" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="PieChart">
+        <attr name="pie_title" format="string"/>
+        <attr name="pie_max" format="integer"/>
+        <attr name="pie_progress" format="integer"/>
+        <attr name="pie_width" format="dimension"/>
+        <attr name="pie_height" format="dimension"/>
+    </declare-styleable>
+
+</resources>

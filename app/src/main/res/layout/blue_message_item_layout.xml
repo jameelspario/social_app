@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.deificindia.indifun.ui.FiveByEightRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/background"
+    android:layout_marginStart="@dimen/_4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/live_icon"
+        android:layout_width="@dimen/live_component_base_height"
+        android:layout_height="@dimen/live_component_base_height"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/live_message_item_text"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/live_message_item_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:gravity="center_vertical"
+        android:minHeight="@dimen/live_component_base_height"
+        android:paddingStart="@dimen/live_message_text_padding_horizontal"
+        android:paddingTop="@dimen/live_message_text_padding_vertical"
+        android:paddingBottom="@dimen/live_message_text_padding_vertical"
+        android:textAlignment="gravity"
+        android:textSize="@dimen/text_size_medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/live_icon"/>
+
+</com.deificindia.indifun.ui.FiveByEightRelativeLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/silvermedalll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15dp"
+        android:layout_marginTop="@dimen/_15dp"
+        android:layout_marginRight="@dimen/_15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/winsilvermedals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/winsilvermedal"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/silvermedallist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_10dp"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/nosilvermedals"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/nosilvermedals"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

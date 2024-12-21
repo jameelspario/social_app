@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <androidx.cardview.widget.CardView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_10sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:src="@drawable/ic_close_icon"
+                android:layout_weight="0.5"
+                android:id="@+id/close"
+                android:layout_margin="@dimen/_5sdp"
+                android:foregroundGravity="center"
+                android:layout_gravity="end"/>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+   android:weightSum="2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Your Familie's "
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1.5"
+        android:layout_margin="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
+
+</LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_200dp"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:id="@+id/frameimage1"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200dp">
+<ImageView
+    android:layout_width="@dimen/_20sdp"
+    android:layout_height="@dimen/_20sdp"
+    android:src="@drawable/ic_baseline_edit_24"
+    android:layout_gravity="end"/>
+                    <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/no_image"
+                        android:id="@+id/frameimage"
+                        android:scaleType="fitXY"
+                    android:layout_gravity="end"/>
+
+                     </FrameLayout>
+
+                <com.deificindia.indifun.ui.CircleImageView
+                    android:layout_width="@dimen/_90dp"
+                    android:layout_height="@dimen/_90dp"
+                    android:src="@drawable/no_image"
+                    android:layout_marginTop="-100dp"
+                    android:id="@+id/clickicon"
+                    android:visibility="visible"
+                    android:layout_gravity="center">
+
+                </com.deificindia.indifun.ui.CircleImageView>
+
+            </LinearLayout>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rectangleedittext"
+                android:hint="Create Family Name"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:id="@+id/familytext"
+                android:maxLength="50"
+                android:inputType="text">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rectangleedittext"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="Family Join Levels"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/familyabout"
+                android:inputType="number"
+                android:maxLength="5">
+
+            </EditText>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/rectangleedittext"
+                android:hint="About us Family"
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/familyabout1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:maxLength="500"
+                android:inputType="text">
+
+            </EditText>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@color/av_green"
+                android:text="Create"
+                android:id="@+id/create_family"
+                android:layout_margin="@dimen/_15sdp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

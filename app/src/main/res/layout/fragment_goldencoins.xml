@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="horizontal">
+
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/totalcoinstv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Coins"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_18sdp"
+        android:padding="5dp"
+        android:textStyle="bold" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/goldencoinl"
+        android:layout_margin="@dimen/_5sdp"
+android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_toRightOf="@id/totalcoinstv1"
+        android:src="@drawable/coin2"/>
+    <TextView
+        android:id="@+id/totalcoinstv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1222"
+        android:gravity="center"
+        android:layout_toEndOf="@+id/goldencoinl"
+        android:layout_centerVertical="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_18sdp"
+        android:padding="5dp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal" />
+</LinearLayout>
+</LinearLayout>
+
+
+
+        <Button
+            android:id="@+id/button_Click"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/rectanglepp"
+            android:cursorVisible="true"
+            android:gravity="center"
+android:layout_marginTop="@dimen/_5sdp"
+            android:shadowRadius="@integer/anim_length"
+            android:text="@string/buy_coin"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/goldencoinlist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="@dimen/_10dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:id="@+id/nocoins"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="@string/nocoins"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

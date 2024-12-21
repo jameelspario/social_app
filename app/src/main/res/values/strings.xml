@@ -1,0 +1,323 @@
+<resources>
+    <string name="app_name">indifun</string>
+
+
+    <string name="phone_number">Mobile Number</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_failure">Sorry! Not connected to internet</string>
+    <string name="netwrokerrorpleasetryaftersometime">Network Error, Please Try After Sometime</string>
+    <string name="onlinecustomer">Online Customer Service</string>
+    <string name="contact1">Contact 1</string>
+    <string name="contact2">Contact 2</string>
+    <string name="email1">Email 1</string>
+    <string name="email2">Email 2</string>
+    <string name="sureexist">You will not be able to see any more content from this person.Are you sure you want to un-follow them ?</string>
+    <string name="address">Address 1 :</string>
+    <string name="ownername">Owner Name :</string>
+    <string name="addres2s">Address 2 :</string>
+    <string name="givepermissions">Give Permission</string>
+    <string name="pleasegivepermissions">Please Give Camera Access Permission</string>
+    <string name="pleaseuploadimage">Please Upload Profile Image</string>
+    <string name="cancel1">Cancel</string>
+    <string name="yes">Yes</string>
+    <string name="logoutmsg">Are you sure want to logout?</string>
+    <string name="nocoins">No Coins Available</string>
+    <string name="nostickers">No Stickers</string>
+    <string name="nogroups">No Group Available</string>
+    <string name="addgroup">Create Group</string>
+    <string name="entergroupname">Please Enter Group Name</string>
+    <string name="entergroupdesc">Please Enter Group Description</string>
+    <string name="entergroupcat">Select Group Category</string>
+    <string name="nobroadcast">No Broadcast Available</string>
+    <string name="nouserfound">No Users Found</string>
+    <string name="addpost">Create Post</string>
+    <string name="enterpostcontent">Enter Post Content.....</string>
+    <string name="pleaseuploadpostimage">Please Upload Post Image</string>
+    <string name="coinspurchased">Coins Purchased</string>
+    <string name="succespay">Successfully Paid For Coins Purchased.</string>
+    <string name="ok">Ok</string>
+
+    <string name="confirm">CONFIRM</string>
+    <string name="cancel">CANCEL</string>
+    <string name="checkin">Check in</string>
+    <string name="sahrelive">Share Live</string>
+    <string name="recharge">Recharge</string>
+    <string name="winsilvermedal">Win Silver Medals</string>
+    <string name="nosilvermedals">No Silver Medals</string>
+    <string name="notfilledin">Not Filled In</string>
+    <string name="updateprofile">Update Profile</string>
+    <string name="alert">Alert !</string>
+    <string name="deletemsg">Are you sure want to delete all broadcast from the list ?</string>
+    <string name="deletemsg1">Are you sure want to delete this broadcast ?</string>
+    <string name="nolanguages">No Languages Available</string>
+    <string name="nointerst">No Interest Selected Yet</string>
+    <string name="nolanguages1">No Languages Selected Yet</string>
+    <string name="nointerstsubcatlist">No Interest Are Available</string>
+    <string name="aristocracycenter">Aristocracy Center</string>
+    <string name="aristocracycenterpay">Successfully Paid</string>
+    <string name="aristocracycenterpay1">Not enough coins,please recharge first.</string>
+
+
+    <!-- Application -->
+
+    <!-- Home Fragment -->
+
+    <!-- My Profile Fragment -->
+
+    <!-- Live Prepare Activity -->
+    <string name="live_prepare_hint">Title:</string>
+    <string name="go_live_text">Go Live</string>
+
+    <!-- Live -->
+    <string name="live_bottom_edit_hint">Say something &#8230;</string>
+    <string name="live_send_empty_message">Empty messages are not sent</string>
+
+    <string name="live_system_notification_member_joined">has joined</string>
+    <string name="live_system_notification_member_left">has left</string>
+
+    <!-- Virtual Host -->
+
+    <string name="live_pk_host_remaining_time_hint">PK left:</string>
+
+    <!-- Messages -->
+
+    <!-- Action Sheet -->
+    <string name="live_room_setting_action_sheet_title">Live Room Setting</string>
+    <string name="live_room_setting_title_resolution">Resolution</string>
+    <string name="live_room_setting_title_framerate">Frame Rate</string>
+    <string name="live_room_setting_title_bitrate">Bitrate</string>
+    <string name="live_room_setting_bitrate_value_format" translatable="false">%d kbps</string>
+    <string name="live_room_setting_bitrate_value_default">Default</string>
+
+    <string name="live_room_beauty_action_sheet_title">Beauty</string>
+
+    <string name="live_room_beauty_action_sheet_blur">Blur</string>
+    <string name="live_room_beauty_action_sheet_color">Whiten</string>
+    <string name="live_room_beauty_action_sheet_cheek_thinning">Cheek</string>
+    <string name="live_room_beauty_action_sheet_eye_enlarge">Eye</string>
+
+    <string name="live_room_bg_music_action_sheet_title">Background Music</string>
+    <string name="live_room_bg_music_action_sheet_credit_hint">Music:&#160;&#160;</string>
+    <string name="live_room_bg_music_action_sheet_credit_link">https://www.bensound.com</string>
+
+    <string name="live_room_gift_action_sheet_title">Presents</string>
+    <string name="live_room_gift_action_sheet_send">Send</string>
+    <string name="live_room_gift_action_sheet_value_format">(%d Coins)</string>
+    <string name="live_room_gift_action_sheet_value_format_2"> %s</string>
+
+    <string name="live_room_pk_room_list_title_format">Room List (%d)</string>
+    <string name="Req_pay">Request Payment</string>
+
+    <string name="live_room_tool_action_sheet_title">Tool</string>
+    <string-array name="live_room_action_sheet_tool_names">
+        <item>Speaker</item>
+        <item>EarMonitor</item>
+        <item>Rotate</item>
+        <item>Camera</item>
+        <item>Setting</item>
+    </string-array>
+
+    <string name="live_room_host_in_invite_user_list_action_sheet_title">Invite</string>
+    <string name="live_room_all_online_user_action_sheet_title">Online Users</string>
+    <string name="live_room_call_pending_list_action_sheet_title">Calls</string>
+
+    <string name="live_room_pk_room_list_button_text">Invite PK</string>
+
+    <string name="live_room_pk_room_receive_pk_request_title">PK Received</string>
+    <string name="live_room_pk_room_receive_pk_request_message">%s invited you to his PK room for %s minute duration,\n do you accept?</string>
+
+    <!-- dialog -->
+    <string name="dialog_negative_button">Cancel</string>
+    <string name="dialog_positive_button">Confirm</string>
+    <string name="dialog_positive_button_accept">Accept</string>
+    <string name="dialog_negative_button_refuse">Refuse</string>
+
+    <!-- Toasts -->
+
+    <string name="in_ear_monitoring_failed">Please use wired headsets</string>
+
+    <string-array name="random_channel_names">
+        <item>Cheer</item>
+        <item>Vibe</item>
+        <item>Devine</item>
+        <item>Duo</item>
+        <item>Ablaze</item>
+        <item>Amaze</item>
+        <item>Harmony</item>
+        <item>Verse</item>
+        <item>Vigilant</item>
+        <item>Contender</item>
+        <item>Vista</item>
+        <item>Wander</item>
+        <item>Collections</item>
+        <item>Moon</item>
+        <item>Boho</item>
+        <item>Everest</item>
+    </string-array>
+
+    <string-array name="random_surnames">
+        <item>Atkinson</item>
+        <item>Edwards</item>
+        <item>Gibson</item>
+        <item>Holmes</item>
+        <item>Kelvin</item>
+        <item>Lloyd</item>
+        <item>Payne</item>
+        <item>White</item>
+    </string-array>
+
+    <string-array name="random_names">
+        <item>Alexander</item>
+        <item>Halley</item>
+        <item>Rickey</item>
+        <item>Xavior</item>
+        <item>Yolanda</item>
+        <item>Corynn</item>
+        <item>Daniel</item>
+        <item>Kelly</item>
+        <item>Lauren</item>
+    </string-array>
+
+    <!-- Network status detection -->
+
+    <!-- Policies -->
+
+    <string name="enter_a_title">Enter a title</string>
+
+    <array name="imagesbg">
+        <item>@drawable/bg_live_1</item>
+        <item>@drawable/bg_live_2</item>
+        <item>@drawable/bg_live_3</item>
+        <item>@drawable/bg_live_4</item>
+    </array>
+
+    <!--multi select image-->
+
+    <string name="pager_bullet_separator" formatted="false">%s / %s</string>
+
+    <string name="uname">username</string>
+    <string name="idn">16265564</string>
+    <string name="logout">Log Out</string>
+    <string name="indifunid">Indifun ID : </string>
+    <string name="name">Name</string>
+
+
+    <string name="broadcast">Broadcasts Watched</string>
+    <string name="dist">distance</string>
+    <string name="bar">|</string>
+    <string name="time">time</string>
+    <string name="text">TextView</string>
+    <string name="update">Update</string>
+    <string name="currentloc">Select Current Location</string>
+    <string name="status">Married</string>
+    <string name="relation">In a relationship</string>
+
+    <string name="first_mesage">Welcome to indifun, indifun strickly prohibit sexual, smoking, voilent, and/or gambling content.</string>
+
+    <!-- dialog -->
+
+    <string name="end_live_streaming_title_owner">End Broadcasting</string>
+    <string name="end_live_streaming_title_owner_2">Exit</string>
+    <string name="end_live_streaming_title_user">Leave Broadcasting</string>
+    <string name="end_live_streaming_message_owner">Do you want to end this broadcasting?</string>
+    <string name="end_live_streaming_message_owner_2">Do you want to exit broadcasting?</string>
+    <string name="end_live_streaming_message_user">Do you want to leave this broadcast?</string>
+
+    <string name="dialog_pk_force_quit_title">End PK</string>
+    <string name="dialog_pk_force_quit_message">End PK with "%s",\n and leave this room?</string>
+
+    <!-- E Commerce -->
+
+
+    <!--pic chooser-->
+
+    <!-- LetterTileProvider -->
+    <!-- All of the possible tile background colors -->
+    <array name="letter_tile_colors">
+        <item>#f16364</item>
+        <item>#f58559</item>
+        <item>#f9a43e</item>
+        <item>#e4c62e</item>
+        <item>#67bf74</item>
+        <item>#59a2be</item>
+        <item>#2093cd</item>
+        <item>#ad62a7</item>
+    </array>
+
+    <string name="speak_your_heart_out">Speak your heart out to the world, express your tallent</string>
+    <string name="tool_bar_image">trans_toolbar_image_view</string>
+    <string name="tool_bar_text">online_customer_service_name</string>
+    <string name="trans_other_user_deatail_activity_name">trans_other_user_deatail_activity_name</string>
+    <string name="trans_other_user_deatail_activity_profiles">trans_other_user_deatail_activity_profiles</string>
+    <string name="trans_other_user_deatail_activity_tags">trans_other_user_deatail_activity_tags</string>
+    <string name="trans_other_user_deatail_activity_follow_button">trans_other_user_deatail_activity_follow_button</string>
+    <string name="trans_layout_moment_notification">trans_layout_moment_notification</string>
+    <string name="trans_pager_image_view">trans_pager_image_view</string>
+    <string name="trans_profile_item_zoom">trans_profile_item_zoom</string>
+    <string name="trans_live_activity_anim">trans_live_activity_anim</string>
+    <string name="trans_other_user_deatail_activity_zoom">trans_other_user_deatail_activity_zoom</string>
+    <string name="trans_edit_user_profile">trans_edit_user_profile</string>
+    <string name="trans_profile_activity_edit_profile">trans_profile_activity_edit_profile</string>
+    <string name="trans_profile_activity_edit_language">trans_profile_activity_edit_language</string>
+    <string name="trans_profile_activity_edit_interest">trans_profile_activity_edit_interest</string>
+    <string name="trans_rechargeactivity_coin_record">trans_rechargeactivity_coin_record</string>
+    <string name="type_a_message">Type a message</string>
+    <string name="menu_document">Attach Gallery</string>
+    <string name="wait_while_we_are_getting_resource_update">Wait while we are getting resource update</string>
+    <string name="close_all_calls">Close All Calls</string>
+    <string name="close_call">Close Call</string>
+    <string name="end_call">End Call</string>
+    <string name="got_call_request">Got call request.</string>
+    <string name="join_call">Join call.</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="dialog_go_button">Go</string>
+
+    <string name="customactivityoncrash_error_activity_error_occurred_explanation">An unexpected error occurred.\nSorry for the inconvenience.</string>
+    <string name="customactivityoncrash_error_activity_restart_app">Restart app</string>
+    <string name="customactivityoncrash_error_activity_close_app">Close app</string>
+    <string name="customactivityoncrash_error_activity_error_details">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_title">Error details</string>
+    <string name="customactivityoncrash_error_activity_error_details_close">Close</string>
+    <string name="customactivityoncrash_error_activity_error_details_copy">Copy to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_copied">Copied to clipboard</string>
+    <string name="customactivityoncrash_error_activity_error_details_clipboard_label">Error information</string>
+
+    <string name="no_location_detected">
+        No location detected. Make sure location is enabled on the device.
+    </string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="gift_pack_is_worth">Gift pack is worth</string>
+    <string name="income">Income</string>
+    <string name="monthly_income">Monthly Income:</string>
+    <string name="redeem">Redeem</string>
+    <string name="buy_coin">Buy coin</string>
+    <string name="transfer_to_account">Transfer to account</string>
+    <string name="convert_your_earning_to">Convert your earning to buy coin that you would use to buy other Indifun product.</string>
+    <string name="choose_amount_to_buy_coin">Choose amount to buy coin</string>
+    <string name="coin_you_will_get">Coin you will get</string>
+    <string name="zero">0</string>
+    <string name="buy">Buy</string>
+    <string name="transfer_your_earning_to_your_bank_account">Transfer your earning to your bank account.</string>
+    <string name="wallet">Wallet</string>
+    <string name="submit_redeem_request">Submit redeem request</string>
+    <string name="bank_details">Bank details</string>
+    <string name="bank_name">* Bank Name</string>
+    <string name="bank_account_number">* Bank Account Number</string>
+    <string name="ifse_code">* IFSE code</string>
+    <string name="continue_paying_to_receive_coins">ress</string>
+    <string name="say_something">Say Something...</string>
+    <string name="No">No</string>
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="apply_to_join">Apply to join</string>
+    <string name="family_contribution_rank">Family Contribution Rank</string>
+
+
+</resources>

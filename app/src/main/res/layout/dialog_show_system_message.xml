@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_background"
+    android:layout_marginStart="@dimen/_24dp"
+    android:layout_marginEnd="@dimen/_24dp">
+
+    <TextView
+        android:id="@+id/txthead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:padding="@dimen/_8dp"/>
+
+    <TextView
+        android:id="@+id/txtmessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="System"
+        android:gravity="center"
+        android:layout_below="@id/txthead"
+        android:padding="@dimen/_12dp"/>
+
+
+    <View
+        android:id="@+id/dialog_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/txtmessage"
+        android:background="@color/gray_lightest"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dialog_button_height"
+        android:layout_below="@id/dialog_divider"
+        android:orientation="horizontal">
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/dialog_gotit_button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Got it"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/blue_original"
+            android:textAlignment="gravity"
+            android:gravity="center"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

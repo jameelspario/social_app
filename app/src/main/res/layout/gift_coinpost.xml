@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/transparent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+
+            <RelativeLayout
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="wrap_content"
+              >
+
+                <ImageView
+                    android:id="@+id/imageget"
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80dp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+
+                    android:src="@drawable/ic_send_message_svgrepo_com" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:background="@drawable/rectanglegift"
+                    android:padding="@dimen/_5sdp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:id="@+id/textcount"
+                    android:textSize="@dimen/_12dp" />
+
+                <TextView
+                    android:id="@+id/text_gift"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/imageget"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:fontFamily="sans-serif"
+                    android:gravity="center"
+                    android:text="Sudhir"
+                    android:textSize="@dimen/_15sdp">
+
+                </TextView>
+
+            </RelativeLayout>
+
+
+
+
+
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

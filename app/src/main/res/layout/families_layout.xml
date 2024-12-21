@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_70dp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        android:id="@+id/card_layout"
+        android:layout_margin="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_70dp"
+            android:background="@color/gray_alpha"
+            android:orientation="horizontal"
+            android:weightSum="2">
+            <com.deificindia.indifun.ui.CircleImageView
+                android:layout_width="@dimen/_60dp"
+                android:src="@drawable/flag_india"
+                android:layout_height="@dimen/_60dp"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:id="@+id/profileimage"
+                android:layout_marginStart="@dimen/_10sdp">
+
+            </com.deificindia.indifun.ui.CircleImageView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Explore More Familie's"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:layout_weight="1.5"
+                android:layout_marginStart="@dimen/_10sdp"/>
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:text="Go"
+                android:layout_weight="0.5"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@drawable/circle_white1"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:textColor="@color/black"
+                android:layout_marginStart="@dimen/_10sdp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

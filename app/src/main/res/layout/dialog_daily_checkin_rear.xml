@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_12dp"
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_36dp"
+            android:padding="@dimen/_12dp"
+            android:background="@drawable/bg_checkin_body">
+
+            <!-- <com.deificindia.indifun.ui.luck.LuckyWheelView
+                 android:layout_centerInParent="true"
+                 app:lkwBackgroundColor="#FF9800"
+                 app:lkwTopTextColor="#263238"
+                 app:lkwCenterImage="@drawable/wheel2"
+                 app:lkwCursor="@drawable/ic_cursor"
+                 android:id="@+id/luckyWheel1"
+                 android:layout_margin="@dimen/_24dp"
+                 android:layout_width="300dp"
+                 android:layout_height="300dp" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCongo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/luckyWheel1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_34dp"
+                android:textColor="@color/white"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:text="Congrats!"/>
+
+
+            <LinearLayout
+                android:id="@+id/layouttags"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_300dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_below="@+id/tvCongo"
+                android:layout_centerHorizontal="true"/>
+
+            <Button
+                android:id="@+id/btnchecking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:layout_marginStart="@dimen/_24dp"
+                android:layout_marginEnd="@dimen/_24dp"
+                android:layout_marginTop="@dimen/_12dp"
+                android:layout_marginBottom="@dimen/_12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/layouttags"
+                android:background="@drawable/bg_button_click_yellow_2"
+                android:textColor="@color/white_text"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/btnchecking"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text=""/>
+
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="@dimen/_24dp"
+                android:layout_height="@dimen/_24dp"
+                android:src="@drawable/ic_close_icon"
+                android:layout_alignParentEnd="true"
+                app:tint="@color/white"/>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/headerlay"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_52dp"
+            android:paddingStart="@dimen/_40dp"
+            android:paddingEnd="@dimen/_40dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bg_checkin_title"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Daily Check-in"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_12dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+
+    <com.fevziomurtekin.widget.RainlayoutView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/rainview"
+        app:isColorful="true"
+        app:dropPerSecond="50"
+        app:durationOfDropTime="500"
+        app:dropSrc="@drawable/ic_heart"
+        app:dropTintColor="@color/colorPrimary"/>
+
+
+</FrameLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parent_zoom"
+    android:transitionName="@string/trans_other_user_deatail_activity_zoom"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/action_sheet_list_item_bg_color">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <com.deificindia.indifun.ui.CircleImageView
+            android:id="@+id/live_room_action_sheet_user_list_item_icon"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:src="@drawable/avatar"
+            android:padding="@dimen/_10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:transitionName="@string/trans_other_user_deatail_activity_profiles"
+            tools:ignore="MissingConstraints" />
+
+        <FrameLayout
+            android:id="@+id/profileFrame"
+            android:layout_width="@dimen/_70dp"
+            android:layout_height="@dimen/_70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/activity_vertical_margin"
+        android:layout_marginEnd="@dimen/activity_vertical_margin"
+        android:layout_toEndOf="@id/relativeLayout"
+        android:orientation="vertical"
+        >
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/live_room_action_sheet_user_list_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_4dp"
+            android:text="name"
+            android:textColor="@color/action_sheet_list_item_text_color_black"
+            android:textSize="@dimen/text_size_medium"/>
+
+
+        <LinearLayout
+            android:id="@+id/tagLay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_4dp"
+            android:transitionName="@string/trans_other_user_deatail_activity_tags"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

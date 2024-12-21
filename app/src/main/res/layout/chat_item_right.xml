@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="1dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_alignParentEnd="true"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true">
+
+        <com.deificindia.indifun.ui.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/profile_image"
+            android:visibility="gone"/>
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/background_right">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/show_message"
+            android:textSize="18sp"
+            android:layout_margin="@dimen/_5sdp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/message_image_layout"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
+            android:src="@drawable/ic_user"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_below="@+id/show_message"
+            android:visibility="visible"
+            android:scaleType="centerCrop"/>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/gettime"
+    android:text="9.30am"
+    android:layout_marginEnd="@dimen/_2sdp"
+    android:layout_marginRight="@dimen/_2sdp"
+    android:layout_below="@id/show_message"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentRight="true"
+    android:textColor="@color/black"
+    android:textSize="10sp"
+    android:fontFamily="sans-serif"
+    android:layout_gravity="end"
+    android:layout_height="wrap_content">
+
+</TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_seen"
+            android:layout_gravity="end"
+            android:textSize="10sp"
+            android:fontFamily="sans-serif"
+            android:text="Seen"
+            android:layout_marginEnd="@dimen/_2sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:textColor="@color/black"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </LinearLayout>
+</FrameLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

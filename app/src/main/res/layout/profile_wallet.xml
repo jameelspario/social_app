@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_5dp"
+    android:elevation="@dimen/_50dp" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recharge_coin_card_view"
+        android:transitionName="@string/trans_profile_item_zoom"
+        android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_below="@+id/txt_wallet_title">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/icon_coins"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dollar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_coins"
+                    android:padding="10dp"
+                    android:text="Coins: "
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_toRightOf="@+id/icon_rechargecoins"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvcoins"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_toRightOf="@+id/icon_rechargecoins"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <!--        <view-->
+            <!--            android:layout_width="@dimen/_1dp"-->
+            <!--            android:layout_height="match_parent"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/icon_dimonds"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/ic_dollar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_dimonds"
+                    android:padding="10dp"
+                    android:text="Dimonds: "
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_toRightOf="@+id/icon_rechargecoins"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvdimonds"
+                    android:padding="10dp"
+                    android:text="0"
+                    android:textSize="@dimen/_15sdp"
+                    android:layout_toRightOf="@+id/icon_rechargecoins"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

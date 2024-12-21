@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.GeneralActivity">
+
+    <include
+        android:id="@+id/toolbar1"
+        layout="@layout/generaltoolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar1"
+        android:background="@color/white"
+        android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/rl_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:orientation="vertical"
+        android:foreground="?attr/selectableItemBackground">
+
+        <TextView
+            android:id="@+id/tv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="@dimen/_5dp"
+            android:text="Distance"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tvdistacevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_toRightOf="@+id/icon_brodcastwatch"
+            android:paddingLeft="10dp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:text="Miles"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

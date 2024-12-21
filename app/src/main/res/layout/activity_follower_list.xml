@@ -1,0 +1,69 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:id="@+id/posyi"
+    tools:context="com.deificindia.firebasefragment.FollowerFragmentFirebase">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_20sdp">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transitionName="@string/tool_bar_image"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/ic_baseline_arrow_back_ios_24"
+            app:tint="@color/black" />
+
+        <TextView
+            android:transitionName="@string/tool_bar_text"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:id="@+id/txt_header_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20dp"
+            android:text="Follow People's Lists"
+            android:fontFamily="@font/opensans_semibold"/>
+
+
+
+        <ImageView
+            android:id="@+id/deleltbroadcasts"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="@dimen/_5sdp"
+            android:contentDescription="@null"
+            app:srcCompat="@drawable/delete"
+            android:visibility="gone"
+            app:tint="@color/colorPrimary" />
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/_10dp"
+        android:id="@+id/recycler12"/>
+
+
+
+    <!--    <include layout="@layout/notification_notfound"/>-->
+
+</LinearLayout>

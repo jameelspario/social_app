@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".fragments.LiveHotFragment">
+    <RelativeLayout
+        android:id="@+id/countrycontainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.deificindia.indifun.ui.HorizontalScroll
+            android:id="@+id/horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/countryRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none" />
+
+        </com.deificindia.indifun.ui.HorizontalScroll>
+
+
+        <ImageView
+            android:id="@+id/leftArrow"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_alignParentEnd="true"
+            app:tint="@color/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="18dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24"/>
+
+        <ImageView
+            android:id="@+id/rightArrow"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            app:tint="@color/black"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="18dp"
+            android:visibility="gone"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24"/>
+
+    </RelativeLayout>
+
+
+    <View style="@style/divider2"
+        android:id="@+id/v1"
+        android:layout_below="@+id/countrycontainer"/>
+
+    <!-- <com.deificindia.indifun.ui.swipe.SwipeRefreshLayout
+         android:id="@+id/swipe_refresh"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">-->
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/hotrecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <!-- </com.deificindia.indifun.ui.swipe.SwipeRefreshLayout>>-->
+    <com.deificindia.indifun.ui.LoadingAnimView
+        android:id="@+id/lottieanim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</LinearLayout>

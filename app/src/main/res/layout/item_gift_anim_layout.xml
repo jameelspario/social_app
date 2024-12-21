@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_55dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginStart="@dimen/_30dp"
+    android:layout_marginEnd="@dimen/_30dp"
+    android:id="@+id/parent">
+
+    <!--<com.skydoves.androidribbon.ShimmerRibbonView
+        android:id="@+id/myshimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.8"
+        app:shimmer_base_alpha="1.0"
+        app:shimmer_highlight_alpha="0.5"
+        app:shimmer_ribbon_padding_top="3dp"
+        app:shimmer_ribbon_padding_bottom="3dp"
+        app:shimmer_ribbon_rotation="0"
+        app:shimmer_auto_start="true"
+        app:shimmer_ribbon_background_color="@color/white"/>-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_5dp"
+        android:layout_gravity="center">
+
+        <com.deificindia.indifun.ui.CircleImageView
+            android:id="@+id/imguser"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginEnd="@dimen/_5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/img_user_default"/>
+
+        <RelativeLayout
+            android:id="@+id/reltop"
+            android:layout_toEndOf="@+id/imguser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="username"
+                android:maxLines="1"
+                android:layout_marginEnd="@dimen/_10dp"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layUserinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/username"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_2dp"
+            android:text="Send gift"
+            android:textColor="#FFFF00"
+            android:layout_below="@+id/reltop"
+            android:layout_toEndOf="@+id/imguser"/>
+
+    </RelativeLayout>
+
+
+
+</FrameLayout>

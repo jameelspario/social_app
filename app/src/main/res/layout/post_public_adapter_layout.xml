@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:id="@+id/parent_zoom"
+    android:transitionName="@string/trans_layout_moment_notification">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_marginTop="7dp"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginRight="5dp"
+        android:transitionName="@string/trans_layout_moment_notification"
+        android:id="@+id/card_item"
+        android:elevation="@dimen/_40dp"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal">
+
+<!--                <com.deificindia.indifun.ui.CircleImageView-->
+<!--                    android:layout_width="60dp"-->
+<!--                    android:layout_height="60dp"-->
+<!--                    android:id="@+id/hotpostdp"-->
+<!--                    android:src="@drawable/avatar"-->
+<!--                    android:layout_weight="0.2"-->
+<!--                    android:layout_marginBottom="@dimen/_5sdp"-->
+<!--                    android:layout_marginTop="@dimen/_5sdp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    >-->
+
+<!--                </com.deificindia.indifun.ui.CircleImageView>-->
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="MissingConstraints">
+
+                    <com.deificindia.indifun.ui.CircleImageView
+                        android:id="@+id/hotpostdp"
+                        android:layout_width="@dimen/_60dp"
+                        android:layout_height="@dimen/_60dp"
+                        android:src="@drawable/avatar"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:transitionName="@string/trans_other_user_deatail_activity_profiles"
+                        tools:ignore="MissingConstraints" />
+                    <FrameLayout
+                        android:id="@+id/profileFrame"
+                        android:layout_width="@dimen/_90dp"
+                        android:layout_height="@dimen/_90dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal" />
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="1.5"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:id="@+id/hotpostname"
+                        android:textColor="@color/black"
+                        android:text="Indrajeet chaturvedi"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif"
+                        android:textStyle="bold"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        android:id="@+id/gender"
+                        android:visibility="visible"
+                       android:layout_marginTop="@dimen/_3dp"
+                        android:orientation="horizontal" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/animation_view"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:lottie_fileName="plus-to-check.json"
+                        app:lottie_loop="false"
+                        android:layout_gravity="end"
+                        app:lottie_autoPlay="false" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="@dimen/_80dp"
+                    android:id="@+id/btn_folloq"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:paddingStart="@dimen/_5dp"
+                    android:paddingEnd="@dimen/_5dp"
+                    android:background="@drawable/cards"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:layout_height="@dimen/_30dp">
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btn_follow"
+    android:layout_gravity="center"
+    android:textColor="@color/white"
+    android:visibility="gone"
+/>
+
+                    <ImageView
+                        android:id="@+id/btn_follow1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:src="@drawable/plus_1"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        app:tint="@color/av_green">
+
+                    </ImageView>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+            <!--post images-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:gravity="center"
+                    android:text="dsfgfd fgdg"
+                    android:padding="@dimen/_5dp"
+                    android:textDirection="firstStrong"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:id="@+id/message"
+                    tools:ignore="RtlCompat" />
+
+
+                <com.deificindia.indifun.ui.multipost.MultiPostImageView
+                    android:id="@+id/multi_post_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5dp"
+                   />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="3"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/hotposttime"
+                        android:fontFamily="sans-serif"
+                        android:text="3 minuts ago"
+                       android:layout_gravity="center"
+                      android:gravity="center"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/location"
+                        android:text="Kanpur "
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:layout_marginLeft="5dp"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:id="@+id/hotpostdistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="sans-serif"
+                        android:text="330.3 km"
+                        android:layout_gravity="center"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+
+
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:weightSum="2"
+                android:orientation="horizontal"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="3"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="5dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:id="@+id/linear1"
+                            >
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:id="@+id/like_icon"
+                                android:src="@drawable/jeart"
+                                />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:id="@+id/likecount"
+                                android:fontFamily="sans-serif"
+                                android:layout_marginLeft="5dp"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linear2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:id="@+id/comment_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/chat" />
+
+                            <TextView
+                                android:id="@+id/comemntcount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="5dp"
+                                android:fontFamily="sans-serif"
+                                android:gravity="center" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                >
+                <LinearLayout
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="5dp"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone"
+                        android:orientation="horizontal"
+                        android:layout_weight="1"
+                        >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:id="@+id/like_icon_"
+                            android:src="@drawable/ic_like1"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:id="@+id/likecount_"
+                            android:text="32"
+                            android:fontFamily="sans-serif"
+                            android:layout_marginLeft="5dp"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chatopen"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageView
+                            android:id="@+id/comment_icon_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_chat" />
+
+                        <TextView
+                            android:id="@+id/comemntcount_"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="chat now" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
+
+
+
+

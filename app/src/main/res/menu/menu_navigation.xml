@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:checked="true"
+        android:icon="@drawable/ic_home_stroke_black"
+        android:title="Home"/>
+
+    <item
+        android:id="@+id/navigation_ex"
+        android:checked="false"
+        android:icon="@drawable/explore"
+        android:title="Explore"/>
+
+    <item
+        android:id="@+id/i_empty"
+        android:checked="true"
+        android:icon="@drawable/videocam"
+        android:iconTint="@android:color/holo_blue_dark"
+        android:title="Live"/>
+
+    <item
+        android:id="@+id/navigation_post"
+        android:checked="false"
+        android:icon="@drawable/ic_email"
+        android:title="Posts"/>
+
+    <item
+        android:id="@+id/navigation_pro"
+        android:checked="false"
+        android:icon="@drawable/person"
+        android:title="Profile"/>
+<!--    <item-->
+<!--        android:id="@+id/navigation_pro1"-->
+<!--        android:checked="false"-->
+<!--        android:icon="@drawable/person"-->
+<!--        android:title="Profile"/>-->
+
+
+</menu>

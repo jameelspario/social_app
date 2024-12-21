@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardMaxElevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        >
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/typ"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_5sdp"
+        android:text="Coin Collection :"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/coin_count"
+        android:layout_toRightOf="@id/typ"
+        android:text=""
+
+        android:layout_margin="@dimen/_5sdp"/>
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/type1"
+        android:layout_below="@id/type">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/amount"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:text="Total Amount :"
+
+        android:layout_margin="@dimen/_5sdp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cost_amount"
+            android:text=""
+            android:layout_toRightOf="@id/amount"
+            android:layout_margin="@dimen/_5sdp"/>
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type2"
+            android:layout_below="@id/type1">
+            <TextView
+                android:id="@+id/tvTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Paid For :"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold" />
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_toRightOf="@id/tvTitle1"/>
+        </RelativeLayout>
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type3"
+            android:layout_below="@id/type2">
+            <TextView
+                android:id="@+id/transcation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Transctions Id:"
+                android:layout_margin="@dimen/_5sdp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/transcationid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_toRightOf="@id/transcation"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/type4"
+            android:layout_below="@id/type3">
+            <TextView
+                android:id="@+id/tvdatetime1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dated :"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/_5sdp"
+                android:textColor="@color/black"
+                />
+    <TextView
+        android:id="@+id/tvdatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_toRightOf="@id/tvdatetime1"
+        />
+
+        </RelativeLayout>
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

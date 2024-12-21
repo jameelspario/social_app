@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/live_room_bg_music_action_sheet_height"
+    android:orientation="vertical"
+    android:background="@drawable/round_top_corner_white_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_8dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/live_room_action_sheet_pk_room_list_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/live_room_action_sheet_text_item_height"
+            android:textAlignment="gravity"
+            android:text="Pk List"
+            android:paddingStart="@dimen/_8dp"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/text_size_normal"
+            android:textColor="@color/gray_darkest"/>
+
+        <Button
+            android:id="@+id/btnRnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white_text"
+            android:layout_alignParentEnd="true"
+            android:paddingStart="@dimen/_4dp"
+            android:paddingEnd="@dimen/_16dp"
+            android:drawableStart="@drawable/ic_baseline_autorenew_24"
+            android:drawableTint="@color/white"
+            android:drawablePadding="@dimen/_8dp"
+            android:background="@drawable/bg_button_click_yellow_2"
+            android:text="Random PK"/>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/live_room_action_sheet_item_divider_height"
+        android:layout_marginStart="@dimen/live_room_action_sheet_margin"
+        android:layout_marginEnd="@dimen/live_room_action_sheet_margin"
+        android:background="@color/gray_lightest"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/live_room_action_sheet_pk_room_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
